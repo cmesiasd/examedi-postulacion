@@ -13,7 +13,7 @@ export const PokemonCard: FC<Props> = ({ pokemon }) => {
 
   const router = useRouter()
 
-  const onClick = () => {
+  const handleClick = () => {
     router.push(`/pokemon/${id}`)
   }
 
@@ -37,7 +37,7 @@ export const PokemonCard: FC<Props> = ({ pokemon }) => {
       <div className='flex justify-center'>
         <button
           type='button'
-          onClick={onClick}
+          onClick={handleClick}
           className='inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-examedi rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-examedi-dark dark:hover:bg-blue-700 dark:focus:ring-blue-800'
         >
           Ver detalles

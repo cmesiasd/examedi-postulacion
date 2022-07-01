@@ -48,7 +48,7 @@ const HomePage: NextPage<Props> = ({ initial_pokemons, initial_next }) => {
 
   return (
     <Layout>
-      <div className='pt-8 grid grid-cols-4 gap-4'>
+      <div className='pt-8 grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-4'>
         {data.map((pokemon) => (
           <PokemonCard key={pokemon.id} pokemon={pokemon} />
         ))}
@@ -59,7 +59,7 @@ const HomePage: NextPage<Props> = ({ initial_pokemons, initial_next }) => {
           type='button'
           className='text-white bg-examedi hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-md px-5 py-2.5 mr-2 mb-2 dark:bg-examedi-dark dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800'
         >
-          Cargar más Pokemons
+          Cargar más Pokémons
         </button>
         <button
           onClick={handleClickCollapse}

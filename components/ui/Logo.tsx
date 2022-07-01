@@ -12,7 +12,7 @@ const Logo: FC = () => {
           height={80}
         />
         <span className='font-bold text-3xl font-sans tracking-tight whitespace-nowrap'>
-          Examedi Pokedex
+          Examedi Pokédex
         </span>
       </a>
     </Link>
