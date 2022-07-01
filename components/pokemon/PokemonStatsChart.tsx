@@ -18,7 +18,7 @@ interface Props {
 }
 
 export const PokemonStatsChart: FC<Props> = ({ stats, title }) => {
-  const stats_reduce = stats.reduce(
+  const statsReduce = stats.reduce(
     (acc, cur) => ({
       ...acc,
       [cur.stat.name]: cur.base_stat
@@ -26,10 +26,10 @@ export const PokemonStatsChart: FC<Props> = ({ stats, title }) => {
     {}
   )
 
-  const labels = Object.keys(stats_reduce)
-  const data = Object.values(stats_reduce)
+  const labels = Object.keys(statsReduce)
+  const data = Object.values(statsReduce)
 
-  const chart_data = {
+  const chartData = {
     labels,
     datasets: [
       {
@@ -46,7 +46,7 @@ export const PokemonStatsChart: FC<Props> = ({ stats, title }) => {
       <span className='title-font text-center font-medium text-2xl text-examedi dark:text-examedi-dark'>
         Puntos de Habilidad de {capitalize(title)}
       </span>
-      <Bar data={chart_data} />
+      <Bar data={chartData} />
     </div>
   )
 }

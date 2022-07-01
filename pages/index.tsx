@@ -6,30 +6,30 @@ import { SmallPokemon } from '../interfaces'
 import { getId, getMorePokemons, getPokemons, session } from '../utils/'
 
 interface Props {
-  initial_pokemons: SmallPokemon[]
-  initial_next: string
+  initialPokemons: SmallPokemon[]
+  initialNext: string
 }
 const LIMIT_POKEMON = 12
 
-const HomePage: NextPage<Props> = ({ initial_pokemons, initial_next }) => {
-  const [data, setData] = useState(initial_pokemons)
-  const [next_url, setNext_url] = useState(initial_next)
+const HomePage: NextPage<Props> = ({ initialPokemons, initialNext }) => {
+  const [data, setData] = useState(initialPokemons)
+  const [nextUrl, setNextUrl] = useState(initialNext)
 
   useEffect(() => {
     if (session.pokemons().length !== 0) {
       setData(session.pokemons())
-      setNext_url(sessionStorage.getItem('next'))
+      setNextUrl(sessionStorage.getItem('next'))
     }
   }, [])
 
   useEffect(() => {
     session.savePokemons(data)
-    sessionStorage.setItem('next', next_url)
-  }, [data, next_url])
+    sessionStorage.setItem('next', nextUrl)
+  }, [data, nextUrl])
 
   const fetchData = async () => {
-    const { pokemons, next } = await getMorePokemons(next_url)
-    setNext_url(next)
+    const { pokemons, next } = await getMorePokemons(nextUrl)
+    setNextUrl(next)
     setData(data.concat(pokemons))
   }
 
@@ -41,9 +41,9 @@ const HomePage: NextPage<Props> = ({ initial_pokemons, initial_next }) => {
   const handleClickCollapse = (event) => {
     event.preventDefault()
     sessionStorage.clear()
-    session.savePokemons(initial_pokemons)
-    setData(initial_pokemons)
-    setNext_url(initial_next)
+    session.savePokemons(initialPokemons)
+    setData(initialPokemons)
+    setNextUrl(initialNext)
   }
 
   return (
@@ -86,8 +86,8 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
 
   return {
     props: {
-      initial_pokemons: pokemons,
-      initial_next: next
+      initialPokemons: pokemons,
+      initialNext: next
     }
   }
 }

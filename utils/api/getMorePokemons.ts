@@ -1,7 +1,6 @@
 import { pokeApi } from './'
 import { PokemonListResponse, SmallPokemon } from '../../interfaces'
 import { getId, getNextURL } from '../strings'
-import { cleanData } from '../data'
 
 export const getMorePokemons = async (url: string) => {
   try {

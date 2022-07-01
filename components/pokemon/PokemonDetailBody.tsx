@@ -9,7 +9,7 @@ export const PokemonDetailBody: FC<Props> = ({ pokemon }) => {
   const { abilities } = pokemon
   return (
     <div>
-      <div className='flex border-t border-examedi dark:text-white py-2'>
+      <div className='flex border-t border-examedi dark:border-examedi-dark dark:text-white py-2'>
         <span className='font-bold'>Peso</span>
         <span className='ml-auto '>{pokemon.weight / 10} Kg</span>
       </div>

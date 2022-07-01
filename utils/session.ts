@@ -1,4 +1,5 @@
 import { SmallPokemon } from '../interfaces/pokemon-list'
+
 const savePokemons = (pokemons: object) => {
   sessionStorage.setItem('pokemons', JSON.stringify(pokemons))
 }
