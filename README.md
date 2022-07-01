@@ -1,43 +1,47 @@
-# TypeScript Next.js example
+# Postulación Examedi
 
-This is a really simple project that shows the usage of Next.js with TypeScript.
+Repositorio de un réplica de [Pokédex](https://www.pokemon.com/el/pokedex/) creada para postulación a [Examedi](https://examedi.com/cl/).
 
-## Deploy your own
+## Deploy
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-typescript)
+La aplicación se encuentra corriendo en [Vercel](https://examedi-postulacion.vercel.app/)
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-typescript&project-name=with-typescript&repository-name=with-typescript)
+[![Deploy with Vercel](https://vercel.com/button)](https://examedi-postulacion.vercel.app/)
 
-## How to use it?
+## Requerimientos - Dependencias
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
+La aplicación fue desarrollada en `React` con el lenguaje `Typescript` utilizando las siguientes dependencias:
 
-```bash
-npx create-next-app --example with-typescript with-typescript-app
-# or
-yarn create next-app --example with-typescript with-typescript-app
-# or
-pnpm create next-app --example with-typescript with-typescript-app
-```
+- `NextJS`
+- `Tailwind`
+- `Axios`
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+Para correr el código de manera local se debe tener instalado `Node` y algún gestor de paquetes de esto, como `npm` o `yarn`.
 
-## Notes
-
-This example shows how to integrate the TypeScript type system into Next.js. Since TypeScript is supported out of the box with Next.js, all we have to do is to install TypeScript.
+En la carpeta raíz del proyecto basta con instalar las dependencias con el comando:
 
 ```
-npm install --save-dev typescript
+> npm install
 ```
 
-To enable TypeScript's features, we install the type declarations for React and Node.
+o
 
 ```
-npm install --save-dev @types/react @types/react-dom @types/node
+> yarn install
 ```
 
-When we run `next dev` the next time, Next.js will start looking for any `.ts` or `.tsx` files in our project and builds it. It even automatically creates a `tsconfig.json` file for our project with the recommended settings.
+Para luego ejecutarlo con:
 
-Next.js has built-in TypeScript declarations, so we'll get autocompletion for Next.js' modules straight away.
+```
+> npm run dev
+```
 
-A `type-check` script is also added to `package.json`, which runs TypeScript's `tsc` CLI in `noEmit` mode to run type-checking separately. You can then include this, for example, in your `test` scripts.
+o
+
+```
+> yarn dev
+```
+
+## Extras
+
+Se utiliza la API [PokeAPI](https://pokeapi.co/). La que no prevee directamente todos los datos que posee la Pokedex original. Si bien no es una réplica exacta, se acerca bastante. Por motivos de costos no se quizo completar todos los datos (como debilidades en los detalles de un Pokemon) esto debido a que se debían realizar varias peticiones a la API disminuyendo la velocidad de carga de la aplicación.
