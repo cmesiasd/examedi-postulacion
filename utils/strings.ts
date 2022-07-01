@@ -1,4 +1,4 @@
-export const capitalize = (string: String) =>
+export const capitalize = (string: String): String =>
   (string && string[0].toUpperCase() + string.slice(1)) || ''
 
-export const sanitize = (string: String) => string.replace('-', ' ')
+export const sanitize = (string: String): String => string.replace('-', ' ')

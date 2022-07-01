@@ -1,3 +1,3 @@
-export * from './capitalize'
+export * from './strings'
 export * from './api'
-export * from './getInfoPokemon'
+export * from './icons'
