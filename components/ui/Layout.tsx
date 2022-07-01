@@ -3,7 +3,7 @@ import Head from 'next/head'
 import { Navbar } from './Navbar'
 
 interface Props {
-  title?: string
+  title?: String
 }
 
 export const Layout: FC<Props> = ({ children, title }) => {
