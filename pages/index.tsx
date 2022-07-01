@@ -1,5 +1,5 @@
 import { GetStaticProps, NextPage } from 'next'
-import { PokemonCard } from '../components/pokemon/PokemonCard'
+import { PokemonCard } from '../components/pokemon/'
 import { Layout } from '../components/ui'
 import { PokemonListResponse, SmallPokemon } from '../interfaces'
 import { pokeApi } from '../utils/'
@@ -16,8 +16,11 @@ const HomePage: NextPage<Props> = ({ pokemons }) => (
       ))}
     </div>
     <div className='flex justify-center my-8'>
-      <button className='inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-examedi rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-examedi-dark dark:hover:bg-blue-700 dark:focus:ring-blue-800'>
-        Cargar más Pokemon
+      <button
+        type='button'
+        className='text-white bg-examedi hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-md px-5 py-2.5 mr-2 mb-2 dark:bg-examedi-dark dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800'
+      >
+        Cargar más Pokemons
       </button>
     </div>
   </Layout>

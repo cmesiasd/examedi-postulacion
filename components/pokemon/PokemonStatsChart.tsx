@@ -1,12 +1,10 @@
-import { FC, useEffect } from 'react'
+import { FC } from 'react'
 import {
   Chart as ChartJS,
   CategoryScale,
   LinearScale,
   BarElement,
-  Title,
-  Tooltip,
-  Legend
+  Tooltip
 } from 'chart.js'
 import { Bar } from 'react-chartjs-2'
 import { Stat } from '../../interfaces'

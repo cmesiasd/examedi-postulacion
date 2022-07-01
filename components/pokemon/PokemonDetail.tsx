@@ -1,9 +1,6 @@
 import { FC } from 'react'
 import { Pokemon } from '../../interfaces'
-import { capitalize, sanitize } from '../../utils'
-import { PokemonDetailBody } from './PokemonDetailBody'
-import { PokemonDetailTitle } from './PokemonDetailTitle'
-import { PokemonType } from './PokemonType'
+import { PokemonDetailBody, PokemonDetailTitle, PokemonType } from './'
 
 interface Props {
   pokemon: Pokemon
